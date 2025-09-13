@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Conference Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tech Innovators Conference 2025</h1>
+            <p class="tagline">Register for the premier technology event of the year</p>
+        </header>
+
+        <div class="main-content">
+            <section class="form-section">
+                <h2>Registration Form</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name">
+                        <div class="error" id="nameError">Please enter your full name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <div class="error" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-toggle">
+                            <input type="password" id="password" placeholder="Create a password">
+                            <button type="button" class="toggle-password" id="togglePassword">Show</button>
+                        </div>
+                        <div class="error" id="passwordError">Password must be at least 8 characters with letters and numbers</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" placeholder="Where do you work?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Professional Role</label>
+                        <select id="role">
+                            <option value="">Select your role</option>
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Manager</option>
+                            <option value="student">Student</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error" id="roleError">Please select your role</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Questions or Comments</label>
+                        <textarea id="comments" rows="3" placeholder="Anything you'd like us to know?"></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn">Register Now</button>
+                    
+                    <div class="success-message" id="successMessage">
+                        Registration successful! Thank you for signing up.
+                    </div>
+                </form>
+            </section>
+
+            <section class="features-section">
+                <h2>Interactive Features</h2>
+                
+                <div class="feature">
+                    <h3>Theme Switcher</h3>
+                    <p>Change the color theme of the page:</p>
+                    <div class="theme-switcher">
+                        <button class="theme-btn theme-default" data-theme="default"></button>
+                        <button class="theme-btn theme-dark" data-theme="dark"></button>
+                        <button class="theme-btn theme-light" data-theme="light"></button>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <h3>Ticket Counter</h3>
+                    <p>Select how many tickets you need:</p>
+                    <div class="counter">
+                        <button class="counter-btn" id="decreaseBtn">-</button>
+                        <span class="counter-value" id="ticketCount">1</span>
+                        <button class="counter-btn" id="increaseBtn">+</button>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <h3>Conference Countdown</h3>
+                    <p>Time until the conference begins:</p>
+                    <div id="countdown">10 days, 12 hours, 35 minutes, 20 seconds</div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Tech Innovators Conference. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
